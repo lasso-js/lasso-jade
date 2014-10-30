@@ -9,6 +9,16 @@ Plugin for the [RaptorJS Optimizer](https://github.com/raptorjs/optimizer) that 
 npm install optimizer-jade --save
 ```
 
+Enable the plugin:
+
+```javascript
+require('optimizer').configure({
+    plugins: [
+        'optimizer-jade'
+    ]
+});
+```
+
 You will also need to install [view-engine](https://github.com/patrick-steele-idem/view-engine) and [view-engine-jade](https://github.com/patrick-steele-idem/view-engine-jade):
 
 ```bash
