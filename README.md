@@ -1,7 +1,7 @@
 lasso-jade
 ==============
 
-Plugin for the [Lasso.js](https://github.com/raptorjs/lasso) that compiles Jade templates to CommonJS modules. These templates can easily be rendered using the [view-engine](https://github.com/patrick-steele-idem/view-engine) module (in conjunction with [view-engine-jade](https://github.com/patrick-steele-idem/view-engine-jade)).
+Plugin for the [Lasso.js](https://github.com/lasso-js/lasso) that compiles Jade templates to CommonJS modules. These templates can easily be rendered using the [view-engine](https://github.com/patrick-steele-idem/view-engine) module (in conjunction with [view-engine-jade](https://github.com/patrick-steele-idem/view-engine-jade)).
 
 # Installation
 
