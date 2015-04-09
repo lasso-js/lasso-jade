@@ -41,7 +41,7 @@ describe('optimizer-jade' , function() {
         pageOptimizer.optimizePage({
                 name: 'testPage',
                 dependencies: [
-                    nodePath.join(__dirname, 'fixtures/project1/simple.optimizer.json')
+                    nodePath.join(__dirname, 'fixtures/project1/simple.browser.json')
                 ]
             },
             function(err, optimizedPage) {
