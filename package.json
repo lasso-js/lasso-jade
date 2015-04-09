@@ -1,6 +1,6 @@
 {
     "name": "lasso-jade",
-    "description": "RaptorJS Optimizer plugin to support compilation of Jade templates",
+    "description": "Lasso.js plugin to support compilation of Jade templates",
     "keywords": [
         "lasso",
         "lasso-plugin",
