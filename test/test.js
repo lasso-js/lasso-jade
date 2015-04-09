@@ -7,9 +7,9 @@ var nodePath = require('path');
 var fs = require('fs');
 
 var jadePlugin = require('../'); // Load this module just to make sure it works
-var optimizer = require('optimizer');
+var lasso = require('lasso');
 
-describe('optimizer-jade' , function() {
+describe('lasso-jade' , function() {
 
     beforeEach(function(done) {
         for (var k in require.cache) {
@@ -22,7 +22,7 @@ describe('optimizer-jade' , function() {
 
     it('should render a simple jade dependency', function(done) {
 
-        var pageOptimizer = optimizer.create({
+        var pageOptimizer = lasso.create({
                 fileWriter: {
                     fingerprintsEnabled: false,
                     outputDir: nodePath.join(__dirname, 'static')

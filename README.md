@@ -1,20 +1,20 @@
-optimizer-jade
+lasso-jade
 ==============
 
-Plugin for the [RaptorJS Optimizer](https://github.com/raptorjs/optimizer) that compiles Jade templates to CommonJS modules. These templates can easily be rendered using the [view-engine](https://github.com/patrick-steele-idem/view-engine) module (in conjunction with [view-engine-jade](https://github.com/patrick-steele-idem/view-engine-jade)).
+Plugin for the [RaptorJS Optimizer](https://github.com/raptorjs/lasso) that compiles Jade templates to CommonJS modules. These templates can easily be rendered using the [view-engine](https://github.com/patrick-steele-idem/view-engine) module (in conjunction with [view-engine-jade](https://github.com/patrick-steele-idem/view-engine-jade)).
 
 # Installation
 
 ```bash
-npm install optimizer-jade --save
+npm install lasso-jade --save
 ```
 
 Enable the plugin:
 
 ```javascript
-require('optimizer').configure({
+require('lasso').configure({
     plugins: [
-        'optimizer-jade'
+        'lasso-jade'
     ]
 });
 ```
