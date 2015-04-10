@@ -38,7 +38,7 @@ describe('lasso-jade' , function() {
                 ]
             });
 
-        myLasso.optimizePage({
+        myLasso.lassoPage({
                 name: 'testPage',
                 dependencies: [
                     nodePath.join(__dirname, 'fixtures/project1/simple.browser.json')
