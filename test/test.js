@@ -13,14 +13,14 @@ describe('lasso-jade' , function() {
 
     beforeEach(function(done) {
         for (var k in require.cache) {
-            if (require.cache.hasOwnProperty(k)) {
+            if (require.cache[k]) {
                 delete require.cache[k];
             }
         }
         done();
     });
 
-    it('should render a simple jade dependency', function(done) {
+    it('should render a simple jade dependency', function() {
 
         var myLasso = lasso.create({
                 fileWriter: {
@@ -38,20 +38,14 @@ describe('lasso-jade' , function() {
                 ]
             });
 
-        myLasso.lassoPage({
+        return myLasso.lassoPage({
                 name: 'testPage',
                 dependencies: [
                     nodePath.join(__dirname, 'fixtures/project1/simple.browser.json')
                 ]
-            },
-            function(err, lassoPageResult) {
-                if (err) {
-                    return done(err);
-                }
-
+            }).then((lassoPageResult) => {
                 var output = fs.readFileSync(nodePath.join(__dirname, 'static/testPage.js'), {encoding: 'utf8'});
                 expect(output).to.contain('"/test/fixtures/project1/simple.jade"');
-                done();
             });
     });
 

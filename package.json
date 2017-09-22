@@ -1,36 +1,36 @@
 {
-    "name": "lasso-jade",
-    "description": "Lasso.js plugin to support compilation of Jade templates",
-    "keywords": [
-        "lasso",
-        "lasso-plugin",
-        "jade"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/lasso-js/lasso-jade.git"
-    },
-    "scripts": {
-        "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test"
-    },
-    "author": "Patrick Steele-Idem <pnidem@gmail.com>",
-    "contributors": [
-        "Patrick Steele-Idem <pnidem@gmail.com>"
-    ],
-    "maintainers": "Patrick Steele-Idem <pnidem@gmail.com>",
-    "dependencies": {
-        "jade": "^1.7.0"
-    },
-    "devDependencies": {
-        "chai": "~1.8.1",
-        "mocha": "~1.15.1",
-        "lasso": "^1.8.4"
-    },
-    "license": "Apache License v2.0",
-    "bin": {},
-    "main": "./lasso-jade-plugin.js",
-    "publishConfig": {
-        "registry": "https://registry.npmjs.org/"
-    },
-    "version": "1.1.8"
+  "name": "lasso-jade",
+  "description": "Lasso.js plugin to support compilation of Jade templates",
+  "keywords": [
+    "lasso",
+    "lasso-plugin",
+    "jade"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lasso-js/lasso-jade.git"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test"
+  },
+  "author": "Patrick Steele-Idem <pnidem@gmail.com>",
+  "contributors": [
+    "Patrick Steele-Idem <pnidem@gmail.com>"
+  ],
+  "maintainers": "Patrick Steele-Idem <pnidem@gmail.com>",
+  "dependencies": {
+    "jade": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "lasso": "^2.11.16",
+    "mocha": "~1.15.1"
+  },
+  "license": "Apache License v2.0",
+  "bin": {},
+  "main": "./lasso-jade-plugin.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "version": "1.1.8"
 }
