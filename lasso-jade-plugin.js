@@ -21,15 +21,25 @@ module.exports = function(lasso, config) {
 
                  init: function(lassoContext, callback) {
                      if (!this.path) {
-                         return callback(new Error('"path" is required for a Jade dependency'));
+                         const pathError = new Error('"path" is required for a Jade dependency');
+                         if (callback) return callback(pathError);
+                         throw pathError;
                      }
 
                      this.path = this.resolvePath(this.path);
-                     callback();
+                     if (callback) callback();
                  },
 
                  read: function(lassoContext, callback) {
-                     compileFile(this.path, callback);
+                     if (callback) {
+                         compileFile(this.path, callback);
+                     } else {
+                         return new Promise((resolve, reject) => {
+                            compileFile(this.path, (err, res) => {
+                                return err ? reject(err) : resolve(res);
+                            });
+                         });
+                     }
                  },
 
                  getSourceFile: function() {
@@ -37,7 +47,7 @@ module.exports = function(lasso, config) {
                  },
 
                  getLastModified: function(lassoContext, callback) {
-                     lassoContext.getFileLastModified(this.path, callback);
+                     return lassoContext.getFileLastModified(this.path, callback);
                  }
              });
     });
